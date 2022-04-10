@@ -22,6 +22,9 @@ public class Main
         {
             // initialization of game - 2 cards are added to dealer and player, dealer shows only 1 card and player can cee both of his cards
             System.out.println("//////////////////////////////////////////////////");
+            System.out.println("New game starts!");
+            System.out.println("//////////////////////////////////////////////////");
+            System.out.println();
             deck.shuffleCards();
 
             dealer.clearHand();
@@ -50,7 +53,9 @@ public class Main
 
 
             dealer.showHand();
+            System.out.println();
             player.showHand();
+            System.out.println();
 
             while(dealer.getHandValue() < 17)
             {
@@ -58,6 +63,8 @@ public class Main
                 dealer.addCard(deck.takeCards());
             }
             dealer.showHand();
+            System.out.println();
+            player.showHand();
 
             if(player.getHandValue() > 21 || (player.getHandValue() < dealer.getHandValue() && dealer.getHandValue() <= 21))
             {
