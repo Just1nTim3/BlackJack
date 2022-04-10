@@ -18,6 +18,7 @@ public class Deck implements IDeck
     @Override
     public void shuffleCards()
     {
+        cards.clear();
         for(String card: cardsArray)
         {
             cards.add(card);

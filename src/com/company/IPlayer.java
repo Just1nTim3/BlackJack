@@ -10,4 +10,8 @@ public interface IPlayer
 
     public void showHand();
 
+    public int getHandValue();
+
+    public void clearHand();
+
 }

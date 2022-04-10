@@ -22,7 +22,41 @@ public class Player implements IPlayer
     @Override
     public void showHand()
     {
-        System.out.println(hand.toString());
+        System.out.println("Your hand: " + hand.toString());
+        System.out.println("Your hand value is: " + getHandValue());
+    }
+
+    @Override
+    public void clearHand()
+    {
+        hand.clear();
+    }
+
+    @Override
+    public int getHandValue()
+    {
+        int value = 0;
+        for(String card: hand)
+        {
+            if(card.equals("J") || card.equals("Q") || card.equals("K"))
+            {
+                value = value + 10;
+            }
+            else if(card.equals("A"))
+            {
+                value = value + 11;
+            }
+            else   //if card isn't J,Q,K or A then it must be 1-10, so we just take its value as an integer
+            {
+                value = value + Integer.parseInt(card);
+            }
+        }
+        return value;
+    }
+
+    public ArrayList<String> getHand()
+    {
+        return hand;
     }
 
 }
