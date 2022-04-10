@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public interface IPlayer
 {
-    public void addCard(ArrayList<String> cards);
+    void addCard(ArrayList<String> cards);
 
-    public void removeCard(ArrayList<String> cards);
+    void removeCard(ArrayList<String> cards);
 
-    public void showHand();
+    void showHand();
 
-    public int getHandValue();
+    int getHandValue();
 
-    public void clearHand();
+    void clearHand();
 
 }

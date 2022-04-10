@@ -1,10 +1,8 @@
 package com.company;
 
-import java.util.ArrayList;
 
 public class Dealer extends Player
 {
-    //private ArrayList<String> hand = new ArrayList<>();
 
     public void showCard()
     {
